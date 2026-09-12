@@ -1,0 +1,51 @@
+/* HW3 – COSC 2328 – Professor McCurry 
+Implemented by: Gabriel Enrique Sanchez Zambrana */
+
+:root {
+    --main-color: rgb(142, 83, 83);
+    --space: 20px;
+    --name-size: 64px;
+    --name-color: red;
+    --sub-head-color: #00ad00;
+
+    --img-padding: 100px;
+    --img-border: 5px;
+    --img-margin: 100px;
+    --img-border-radius: 10px;
+    --img-border-color: black;
+}
+
+.job-title:hover { 
+    color: #c0392b; 
+}
+
+body {
+    background-color: cyan;
+    color: blue;
+    font-family: 'Arial';
+
+    p {
+    color: var(--main-color);
+    padding: var(--space);
+    }
+
+    #Gabriel {
+        font-size: var(--name-size);
+        color: var(--name-color);
+    }
+
+    .subhead {
+        color: var(--sub-head-color);
+    }
+
+    .image-wrapper {
+        padding: var(--img-padding);
+        border: var(--img-border) solid var(--img-border-color);
+        margin: var(--img-margin);
+        border-radius: var(--img-border-radius)
+    }
+
+    .image-wrapper img {
+        width: 400px;
+    }
+}
