@@ -1,0 +1,40 @@
+/* HW4 - COSC 2328 - Professor McCurry
+Implemented by: Gabriel Enrique Sanchez Zambrana */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cyan;
+}
+.container {
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+input {
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem;
+}
+button[type="submit"] {
+    padding: .5rem;
+}
+button[type="submit"]:hover { background-color:green; }
+input:focus { 
+    border-color: yellow;
+}
+img {
+    max-width:100%;
+}
+@media (min-width:768px) {
+    .container { display: flex; gap: 2rem}
+}

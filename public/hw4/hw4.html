@@ -1,0 +1,57 @@
+<!-- HW4 - COSC 2328 - Professor McCurry
+Implemented by: Gabriel Enrique Sanchez Zambrana -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/hw4.css">
+</head>
+<body>
+    <header>
+        <h1>FutureWeb 2026</h1>
+        <p>The Future of Web Development</p>
+    </header>
+    <main class="container">
+        <div class="event-info">
+            <h2>Event Details</h2>
+            <ul>
+                <li>Date: October 20, 2026</li>
+                <li>Location: JBWS 266</li>
+                <li>Speakers: Bob Johnson</li>
+            </ul>
+            <img src="images/event.jpg" alt="This image is about the event FutureWeb 2026.">
+        </div>
+        <div class="registration-form">
+            <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Attendee Details</legend>
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" id="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="Email" id="email">
+                    <label for="date">Date of Arrival</label>
+                    <input type="date" id="date">
+                </fieldset>
+                <fieldset>
+                    <legend>Session Preferences</legend>
+                    <select name="Track Selection">
+                        <optgroup label="Frontend">
+                            <option>React</option>
+                            <option>Vue</option>
+                            <option>CSS</option>
+                        </optgroup>
+                        <optgroup label="Backend">
+                            <option>Node.js</option>
+                            <option>Python</option>
+                            <option>Docker</option>
+                        </optgroup>
+                    </select>
+                    <label type="file" for="file">Upload Resume/Portfolio</label>
+                    <input type="file" id="file" accept=".pdf,.docx">
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
