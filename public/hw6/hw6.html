@@ -1,0 +1,57 @@
+<!-- HW6 – COSC 2328 – Professor McCurry
+     Implemented by: Gabriel Enrique Sanchez Zambrana -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW6 - Interactive Product Calculator</title>
+        <link rel="stylesheet" href="css/hw6.css">
+        <script defer src="js/hw6-script.js"></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <h1>Product Order Calculator</h1>
+        </header>
+        <main class="container">
+            <form id="orderForm">
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <select id="product">
+                        <optgroup label="Electronic Devices">
+                            <option>laptop</option>
+                            <option>tablet</option>
+                            <option>phone</option>
+                            <option>monitor</option>
+                            <option>disabled placeholder</option>
+                        </optgroup>
+                        <!-- <optgroup label="Cpu Manufacturer">
+                            <option>Intel</option>
+                            <option>AMD</option>
+                            <option>Qualcomm</option>
+                            <option>Apple</option>
+                        </optgroup>
+                        <optgroup label="Type of RAM">
+                            <option>DDR6</option>
+                            <option>DDR5</option>
+                            <option>DDR4</option>
+                            <option>DDR3</option>
+                        </optgroup> -->
+                    </select>
+                    <input type="number" id="quantity" min="1" max="10" value="1">
+                    <input type="text" id="discountCode">
+                    <button type="submit">Calculate Total</button>
+                </fieldset>
+            </form>
+            <div id="results" class="results-hidden">
+                <p id="textProduct"></p>
+                <p id="textQuantity"></p>
+                <p id="textSubtotal"></p>
+                <p id="textDiscount"></p>
+                <p id="textTax"></p>
+                <p id="textTotal"></p>
+            </div>
+        </main>
+        <footer class="site-footer">Made by Gabriel Sanchez for the course COSC 2328</footer>
+        <noscript>Enable Javascript</noscript>
+    </body>
+</html>
