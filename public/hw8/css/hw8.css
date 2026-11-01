@@ -1,0 +1,14 @@
+/* HW8 – COSC 2328 – Professor McCurry
+   Implemented by: Gabriel Enrique Sanchez Zambrana */
+
+.task-card {
+    border-radius: 1rem;
+}
+
+.error {
+    color: red
+}
+
+.error-message {
+    color: orange
+}
