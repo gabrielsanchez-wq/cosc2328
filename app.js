@@ -7,6 +7,9 @@ const app     = express();                               // create the Express a
 //const PORT    = 3000;                                    // the port your browser connects to
 
 const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
 app.use(express.static(path.join(__dirname, "public"))); // serve every file in public/ as a static file
 
 // IC19 — mission status route
@@ -23,6 +26,8 @@ app.get('/ic19/config', (req, res) => {                  // NEW — IC19: GET ro
     serverTime: new Date().toISOString(),
   });
 });
+
+app.use("/ic20", require("./routes/ic20-routes"));
 
 app.listen(PORT, "0.0.0.0", () =>                        // 0.0.0.0 makes the server reachable from the droplet (IC2)
   console.log(`Running on http://localhost:${PORT}`)
