@@ -8,9 +8,22 @@ const app     = express();                               // create the Express a
 
 const PORT = process.env.PORT || 3000;
 
+const cookieParser = require('cookie-parser');     // ADD — IC24
+const session      = require('express-session');   // ADD — IC24
+
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public"))); // serve every file in public/ as a static file
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(cookieParser());                           // ADD — IC24
+app.use(session({                                  // ADD — IC24
+  secret: 'ic24-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 }
+}));
 
 // IC19 — mission status route
 app.get('/ic19/status', (req, res) => {                  // NEW — IC19: GET route, responds with plain text
@@ -35,9 +48,9 @@ app.use("/ic22", require("./routes/ic22-routes"));
 
 app.use("/ic23", require("./routes/ic23-routes"));
 
-app.use(express.urlencoded({ extended: true }));
-
 app.use('/hw10', require('./routes/hw10-routes'));  // NEW — HW10: mount hw10 router
+
+app.use("/ic24", require("./routes/ic24-routes"))
 
 app.listen(PORT, "0.0.0.0", () =>                        // 0.0.0.0 makes the server reachable from the droplet (IC2)
   console.log(`Running on http://localhost:${PORT}`)
